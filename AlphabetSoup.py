@@ -1,17 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 20 16:11:00 2014
+#!/usr/bin/env python
 
-@author: mcLean
-"""
+### Have the function AlphabetSoup(str) return the string
+### with the letters in alphabetical order. Assume numbers
+### and punctuation symbols will not be included in the string.
 
-### Using the Python language, have the function AlphabetSoup(str) take the 
-### str string parameter being passed and return the string with the letters
-## in alphabetical order (ie. hello becomes ehllo). Assume numbers and
-## punctuation symbols will not be included in the string. 
+def AlphabetSoup(str):
+    return ''.join(sorted(list(str)))
+ 
+#print AlphabetSoup(raw_input()) 
 
-#Input = "coderbyte" Output = "bcdeeorty"
-#Input = "hooplah"   Output = "ahhloop" 
+## test cases: "coderbyte" =>"bcdeeorty"
+##              "hooplah"  => "ahhloop"
 
-def AlphabetSoup(str): 
-   
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
