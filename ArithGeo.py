@@ -18,8 +18,7 @@ def ArithGeo(arr):
 	result = ''
 	x = 1
 	while x < len(arr) and result != -1: 
-		if (float(arr[1])/float(arr[0])) == float(arr[x])/float(arr[x-1
-		]) and result != 'Arithmetic':
+		if (float(arr[1])/float(arr[0])) == float(arr[x])/float(arr[x-1]) and result != 'Arithmetic':
 			result = 'Geometric'	
 			x += 1  	
 		elif (arr[1] -arr[0]) == arr[x] - arr[x-1]:
