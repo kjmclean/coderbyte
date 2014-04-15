@@ -5,10 +5,11 @@
 ### an arithmetic pattern or return "Geometric" if it follows a geometric pattern. 
 ### If the sequence doesn't follow either pattern return -1. An arithmetic sequence 
 ### is one where the difference between each of the numbers is consistent, where as 
-### in a geometric sequence, each term after the first is multiplied by some constant 
-### or common ratio. Arithmetic example: [2, 4, 6, 8] and Geometric 
-### example: [2, 6, 18, 54]. Negative numbers may be entered as parameters, 0 
-### will not be entered, and no array will contain all the same elements.
+### in a geometric sequence, each term after the first is multiplied by
+### some constant or common ratio. Arithmetic example: [2, 4, 6, 8] and
+### Geometric example: [2, 6, 18, 54]. Negative numbers may be entered 
+### as parameters, 0 will not be entered, and no array will contain all
+### the same elements.
 
 ### Use the Parameter Testing feature in the box below to test your code 
 ### with different arguments.
@@ -16,21 +17,17 @@
 def ArithGeo(arr):
 	result = ''
 	x = 1
-	while x < len(arr) and result != -1:
-		print 'Loop', x
-		if (float(arr[1])/float(arr[0])) == float(arr[x])/float(arr[x-1]) and result != 'Arithmetic':
-			result = 'Geometric'
-			print 'Geoloop'
-			print x, arr[x], arr[x-1], result	
+	while x < len(arr) and result != -1: 
+		if (float(arr[1])/float(arr[0])) == float(arr[x])/float(arr[x-1
+		]) and result != 'Arithmetic':
+			result = 'Geometric'	
 			x += 1  	
 		elif (arr[1] -arr[0]) == arr[x] - arr[x-1]:
-			print 'Arithloop'		
 			result = 'Arithmetic'
 			x += 1
-		else:
-			print 'foul loop'	
+		else:	
 			result = -1
-			x = len(arr)
+			break 
 	return result
 # incorrect when [1, 2, 3, 4, 5, 10, 20]
 # incorrect when [-3, -4, -5, -6, -7]
