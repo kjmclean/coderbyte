@@ -16,16 +16,19 @@
 def ArithGeo(arr):
 	result = ''
 	x = 1
-	while x < len(arr):
+	while x < len(arr) and result != -1:
 		print 'Loop', x
-		if (arr[1]/arr[0]) == arr[x]/arr[x-1]:
+		if (float(arr[1])/float(arr[0])) == float(arr[x])/float(arr[x-1]) and result != 'Arithmetic':
 			result = 'Geometric'
+			print 'Geoloop'
 			print x, arr[x], arr[x-1], result	
 			x += 1  	
 		elif (arr[1] -arr[0]) == arr[x] - arr[x-1]:
+			print 'Arithloop'		
 			result = 'Arithmetic'
 			x += 1
 		else:
+			print 'foul loop'	
 			result = -1
 			x = len(arr)
 	return result
